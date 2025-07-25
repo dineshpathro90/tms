@@ -5,7 +5,7 @@ Use this shell script and move it to `/usr/bin` so it becomes a **global command
 
 
 ## Step 1: Create the Shell Script
-#### Create a new file, for example: `tmuxstart`
+#### Create a new file, for example: `tms`
 ```bash
 nano tms
 ```
@@ -41,7 +41,7 @@ chmod +x tms
 ```
 ## Step 3: Move Script to /usr/bin for Global Use
 ```bash
-sudo mv tms /usr/bin/tms
+sudo mv tms /usr/bin/
 ```
 > ⚠️ `/usr/bin` is a system path, so any script placed here can be run from any directory like a built-in command.
 
