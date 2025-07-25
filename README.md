@@ -7,7 +7,7 @@ Use this shell script and move it to `/usr/bin` so it becomes a **global command
 ## 📜 Step 1: Create the Shell Script
 #### Create a new file, for example: `tmuxstart`
 ```bash
-nano tmuxstart
+nano tms
 ```
 #### Paste the following script inside:
 ```bash
@@ -37,11 +37,11 @@ fi
 ```
 ## 🔐 Step 2: Make the Script Executable
 ```bash
-chmod +x tmuxstart
+chmod +x tms
 ```
 ## 📦 Step 3: Move Script to /usr/bin for Global Use
 ```bash
-sudo mv tmuxstart /usr/bin/tmuxstart
+sudo mv tms /usr/bin/tms
 ```
 > ⚠️ `/usr/bin` is a system path, so any script placed here can be run from any directory like a built-in command.
 
@@ -49,10 +49,10 @@ sudo mv tmuxstart /usr/bin/tmuxstart
 
 Now, just run:
 ```bash
-tmuxstart
+tms
 ```
  or with a custom name:
 ```bash
-tmuxstart recon
+tms recon
 ```
 If the session exists, it attaches to it. If not, it creates a new one.
