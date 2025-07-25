@@ -1,0 +1,24 @@
+#!/bin/sh
+# -----------------------------------------------------------------------------
+# Author: DINESH PATHRO
+# YouTube: KaliKings
+# Description: Start or attach to a tmux session by name (default: hacking)
+# License: Free to use with credit
+# -----------------------------------------------------------------------------
+
+# Check if session name is passed as argument
+if [ -z "$1" ]; then
+    read -p "Enter tmux session name (default: hacking): " session_name
+    session_name=${session_name:-hacking}
+else
+    session_name="$1"
+fi
+
+# Start or attach to the session if it already exists
+if tmux has-session -t "$session_name" 2>/dev/null; then
+    echo "Attaching to existing tmux session: $session_name"
+    tmux attach -t "$session_name"
+else
+    echo "Creating new tmux session: $session_name"
+    tmux new-session -s "$session_name"
+fi
