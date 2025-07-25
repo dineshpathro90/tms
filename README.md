@@ -4,7 +4,7 @@ Want to start or attach to a `tmux` session with just one command from anywhere 
 Use this shell script and move it to `/usr/bin` so it becomes a **global command**. Here's how you can do it:
 
 
-## 📜 Step 1: Create the Shell Script
+## Step 1: Create the Shell Script
 #### Create a new file, for example: `tmuxstart`
 ```bash
 nano tms
@@ -35,17 +35,17 @@ else
     tmux new-session -s "$session_name"
 fi
 ```
-## 🔐 Step 2: Make the Script Executable
+## Step 2: Make the Script Executable
 ```bash
 chmod +x tms
 ```
-## 📦 Step 3: Move Script to /usr/bin for Global Use
+## Step 3: Move Script to /usr/bin for Global Use
 ```bash
 sudo mv tms /usr/bin/tms
 ```
 > ⚠️ `/usr/bin` is a system path, so any script placed here can be run from any directory like a built-in command.
 
-## 🚀 Step 4: Use It from Anywhere!
+## Step 4: Use It from Anywhere!
 
 Now, just run:
 ```bash
