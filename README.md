@@ -37,7 +37,7 @@ fi
 ```
 ## Step 2: Make the Script Executable
 ```bash
-chmod +x tms
+sudo chmod +x tms
 ```
 ## Step 3: Move Script to /usr/bin for Global Use
 ```bash
